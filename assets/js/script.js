@@ -16,9 +16,12 @@ var timer = document.querySelector("#time");
 var quizContainer = document.querySelector("#quiz-container");
 var result = document.querySelector("#result");
 var startBtn = document.querySelector("#start-button");
+var quizOver = document.querySelector("#quiz-done");
 
 //create elements, add text and append to html section
-var scoreText = document.createElement("p");
+var scoreText = document.createElement("a");
+scoreText.setAttribute("href", "highScore.html");
+scoreText.setAttribute("class", "text-dark");
 scoreText.innerHTML = "View HighScore";
 highScore.appendChild(scoreText);
 
@@ -31,11 +34,12 @@ headerText.innerHTML =
   "This Javascript will sureley help you to brush up your JavaScript concenpts.It's Quiz Time!!!";
 quizContainer.appendChild(headerText);
 var startQuizBtn = document.createElement("button");
+startQuizBtn.setAttribute("class", "btn-info border-dark");
 startQuizBtn.innerHTML = "Start quiz";
 startBtn.appendChild(startQuizBtn);
 timer.textContent = "Timer : ";
 
-var secondsLeft = 60;
+var secondsLeft = 30;
 var questionIndex = 0;
 var score = 0;
 
@@ -94,51 +98,76 @@ function settime() {
 
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
-    }
+        }
+        else {
+          secondsLeft--;
+        }
 
-    secondsLeft--;
+    
   }, 1000);
 }
 
 //showquesitons
 
 function showquesitons() {
-  var questions = myQuestions[questionIndex].question;
-  var choices = myQuestions[questionIndex].choices;
+  var userQuestions = myQuestions[questionIndex].question;
+  var userchoices = myQuestions[questionIndex].choices;
 
-  quizContainer.textContent = questions;
+  quizContainer.textContent = userQuestions;
 
-  for (i = 0; i < choices.length; i++) {
+  for (i = 0; i < userchoices.length; i++) {
     var choicesBtn = document.createElement("button");
 
-    choicesBtn.setAttribute("class", "d-grid m-3 mx-auto");
-    choicesBtn.textContent = choices[i];
+    choicesBtn.setAttribute(
+      "class",
+      "d-grid col-3 m-3 mx-auto btn-sm border-dark"
+    );
+    choicesBtn.textContent = userchoices[i];
     quizContainer.appendChild(choicesBtn);
     choicesBtn.addEventListener("click", validateAnswer);
   }
 
   function validateAnswer(evt) {
+    var item = myQuestions.length;
     var answer = myQuestions[questionIndex].answer;
-
-    //console.log(evt);
-    //console.log(evt.target.innerText)
-    //console.log("clicked")
-
     var correctAnswer = evt.target.innerText;
 
     if (correctAnswer === answer) {
       alert("correct answer");
       score++;
       alert(score);
-      questionIndex++;
-      showquesitons();
-
-    } else 
-    
-    {
+    } else {
       alert("incorrect answer");
+      secondsLeft -= 10;
+    }
+
+    if (questionIndex < item - 1) {
       questionIndex++;
       showquesitons();
+    } else {
+      console.log("Game Over");
+      secondsLeft =0;
+      quizContainer.classList.add("d-none");
+      //timer.classList.add("d-none");
+      //highScore.classList.add("d-none");
+      quizOver.classList.remove('d-none');
+      
     }
+
   }
+  
+}
+
+
+function quizOver() {
+
+  var quizDone = document.querySelector("#qiiz-done");
+  var finalScore = document.querySelector("#final-score");
+  var userInitial = document.querySelector("#user-initial")
+
+  
+
+
+
+
 }

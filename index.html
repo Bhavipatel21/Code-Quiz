@@ -19,7 +19,7 @@
         <header id="main-header" class="text-center display-5 m-3">Coding quiz</header>
         <section class="container px-4 p-3 border m-2">
             <!--High Score-->
-            <section class="row gx-5">
+            <section class="row">
                 <section class="col">
                     <section id="high-score" class="p-3 border bg-light">
                     </section>
@@ -39,6 +39,24 @@
         </section>
         <section id="result"></section>
         <section id="start-button" class="conatiner text-center"> </section>
+
+        <!--Score-->
+        <section id="quiz-done"class="card w-75 m-3 mx-auto d-none">
+            <h5 class="card-header">All done</h5>
+            <div id="final-score"class="card-body">
+                <h5 class="card-title">Your final score is : </h5>
+        <div class="row gy-2 gx-3 m-2 align-items-center">
+            <label class="col-sm-3">Enter initials</label>
+            <div class="col-sm-3">
+              <input id="user-initial" type="email" class="form-control" id="inputEmail3">
+            </div>
+            <div class="col-sm">
+                <a href="#" class="btn btn-info border-dark">Submit</a>
+            </div>
+          </div>
+            </div>
+        </section>
+
 
     </main>
 
