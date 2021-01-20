@@ -128,6 +128,7 @@ function validateAnswer(evt) {
 
     result.textContent = "Correct";
     score++;
+    console.log(score)
     finalScore.textContent = "Your final score: " + score;
   }
   else {
@@ -164,7 +165,7 @@ function validateAnswer(evt) {
       } else {
           var finalText = {
               initials: initialText,
-              score: secondsLeft
+              score: score
           }
           console.log(finalText);
           var allScores = localStorage.getItem("allScores");
