@@ -1,69 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
 
- 
-
-<head>
+  <head>
     <!--Page Title-->
     <title>coding quiz</title>
     <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
- 
-
-<body>
-
+  <body>
     <main class="container">
-        <header id="main-header" class="text-center display-5 m-3">Coding quiz</header>
-        <section class="container px-4 p-3 border m-2">
-            <!--High Score-->
-            <section class="row">
-                <section class="col">
-                    <section id="high-score" class="p-3 border bg-light">
-                    </section>
-                </section>
+      <header id="main-header" class="text-center display-5 m-3">
+        Coding quiz
+      </header>
 
-                <!--Timer -->
-                <section class="col">
-                    <section id="time" class="p-3 border bg-light"></section>
-                </section>
-            </section>
+      <section class="container px-4 p-3 border m-2">
+        <!--High Score-->
+
+        <section class="row">
+          <section class="col">
+            <section id="high-score" class="p-3 border bg-light"></section>
+          </section>
+
+          <!--Timer -->
+
+          <section class="col">
+            <section id="time" class="p-3 border bg-light"></section>
+          </section>
         </section>
+      </section>
 
+      <!--quiz questions coantainer-->
 
-        <!--quiz questions container-->
+      <section id="quiz-container" class="p-5 text-center border m-3"></section>
 
-        <section id="quiz-container" class="p-5 text-center border m-3">
-        </section>
-        <section id="result"></section>
-        <section id="start-button" class="conatiner text-center"> </section>
+      <section id="result" class="text-center"></section>
 
-        <!--Score-->
-        <section id="quiz-done"class="card w-75 m-3 mx-auto d-none">
-            <h5 class="card-header">All done</h5>
-            <div id="final-score"class="card-body">
-                <h5 class="card-title">Your final score is : </h5>
+      <section id="start-button" class="conatiner text-center"></section>
+
+      <!--Score-->
+
+      <section id="quiz-done" class="card w-75 m-3 mx-auto d-none">
+        <h5 class="card-header">All done!!!</h5>
+
+        <div id="final-score" class="card-body"></div>
+
         <div class="row gy-2 gx-3 m-2 align-items-center">
-            <label class="col-sm-3">Enter initials</label>
-            <div class="col-sm-3">
-              <input id="user-initial" type="email" class="form-control" id="inputEmail3">
-            </div>
-            <div class="col-sm">
-                <a href="#" class="btn btn-info border-dark">Submit</a>
-            </div>
+          <label class="col-sm-3">Enter initials</label>
+
+          <div class="col-sm-3">
+            <input id="user-initial" type="text" class="form-control" />
           </div>
-            </div>
-        </section>
 
-
+          <div class="col-sm">
+            <a id="submit-initial" class="btn btn-info border-dark">Submit</a>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-
     <!--SCRIPTS -->
-    <script src="assets/js/script.js"></script>
 
-</body>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
