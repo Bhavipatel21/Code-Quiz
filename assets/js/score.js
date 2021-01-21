@@ -3,14 +3,6 @@ var listHighScore = document.getElementById("list-highscore");
 var clearHighScoreBtn = document.querySelector("#clear-highscore");
 var showFinalHighScore = localStorage.getItem("score");
 var showUserInitial = localStorage.getItem("initial");
-//var highScore = document.createElement("p");
-
-
-
-//highScore.textContent = showUserInitial + ":" + showFinalHighScore;
-//showScore.appendChild(highScore);
-
-//show localstorage data
 
 var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);

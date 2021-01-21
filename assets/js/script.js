@@ -21,7 +21,7 @@ highScore.appendChild(scoreText);
 
 var headerText = document.createElement("p");
 headerText.innerHTML =
-  "This Javascript will sureley help you to brush up your JavaScript concenpts.It's Quiz Time!!!";
+  "This Javascript will sureley help you to brush up your JavaScript concenpts.It's Quiz Time!!! Please Note that 10 seconds will be deducted if your answer is incorrect.";
 
 quizContainer.appendChild(headerText);
 var startQuizBtn = document.createElement("button");
@@ -49,7 +49,7 @@ var myQuestions = [
   {
     question: "Where is the correct place to insert a JavaScript?",
     choices: [
-     "Ther <head> section",
+      "Ther <head> section",
       "Both the <head> section and the <body> section are correct",
       "The <body> section",
     ],
@@ -151,35 +151,35 @@ function validateAnswer(evt) {
     showquesitons();
   }
 }
-    // Event listener to capture initials and local storage for initials and score
-    var userInitial = document.querySelector("#user-initial");
-    userInitial.textContent="";
+// Event listener to capture initials and local storage for initials and score
+var userInitial = document.querySelector("#user-initial");
+userInitial.textContent = "";
 
-    var submitInitialBtn = document.querySelector("#submit-initial");
-    submitInitialBtn.addEventListener("click", function () {
-      
-      var initialText  = userInitial.value;
-      if (initialText === null) {
+var submitInitialBtn = document.querySelector("#submit-initial");
+submitInitialBtn.addEventListener("click", function () {
 
-          console.log("No value entered!");
+  var initialText = userInitial.value;
+  if (initialText === null) {
 
-      } else {
-          var finalText = {
-              initials: initialText,
-              score: score
-          }
-          console.log(finalText);
-          var allScores = localStorage.getItem("allScores");
+    console.log("No value entered!");
 
-          if (allScores === null) {
-              allScores = [];
-          } else {
-              allScores = JSON.parse(allScores);
-          }
+  } else {
+    var finalText = {
+      initials: initialText,
+      score: score
+    }
+    console.log(finalText);
+    var allScores = localStorage.getItem("allScores");
 
-          allScores.push(finalText);
-          var newScore = JSON.stringify(allScores);
-          localStorage.setItem("allScores", newScore);
-          window.location.href="highscore.html"
-      }
-  });
+    if (allScores === null) {
+      allScores = [];
+    } else {
+      allScores = JSON.parse(allScores);
+    }
+
+    allScores.push(finalText);
+    var newScore = JSON.stringify(allScores);
+    localStorage.setItem("allScores", newScore);
+    window.location.href = "highscore.html"
+  }
+});
