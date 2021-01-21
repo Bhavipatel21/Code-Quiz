@@ -45,15 +45,18 @@ Navigate to url : https://bhavipatel21.github.io/Code-Quiz/
 ## PSEUDOCODE 
 
 Step 1.taking a code quiz
-*click the start button
-    *a timer starts 
-    *presented with a question (will have multiple choice)
-        *answer a question - ( select option --> action will show correct or incorrect)
-            --> if answer a question incorrectly -- time is subtracted from the clock
-        * presented with another question
-         * all questions are answered or the timer reaches 0 -- number of questions == 0 or timer == 0 
-           * the game is over - show the score 
-              * save my initials + submit buttom*/
+* click the start button
+* a timer starts 
+* presented with a question (will have multiple choice)
+* answer a question - ( select option --> action will show correct or incorrect)
+* --> if answer a question incorrectly -- time is subtracted from the clock
+* presented with another question
+* all questions are answered or the timer reaches 0 -- number of questions == 0 or timer == 0 
+* the game is over - show the score 
+* save my initials + score to localstorage
+* submit button and navigate to highscore page
+* save/clear score and initial to higscore page
+
 
 ## Test Cases
 
