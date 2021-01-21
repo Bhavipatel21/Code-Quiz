@@ -12,8 +12,7 @@ if (allScores !== null) {
     for (var i = 0; i < allScores.length; i++) {
 
         var addScoreBtn = document.createElement("button");
-       // createListTag.setAttribute("class", "list-group list-group-item-dark justify-content-center")
-       addScoreBtn.setAttribute(
+         addScoreBtn.setAttribute(
         "class",
         "d-grid m-2 col-3 mx-auto btn-sm border-dark btn-block col-lg-4"
       );

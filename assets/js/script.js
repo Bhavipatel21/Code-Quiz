@@ -18,11 +18,12 @@ scoreText.innerHTML = "View HighScore";
 highScore.appendChild(scoreText);
 
 
-
+//set header text
 var headerText = document.createElement("p");
 headerText.innerHTML =
   "This Javascript will sureley help you to brush up your JavaScript concenpts.It's Quiz Time!!! Please Note that 10 seconds will be deducted if your answer is incorrect.";
 
+//create startquiz button
 quizContainer.appendChild(headerText);
 var startQuizBtn = document.createElement("button");
 startQuizBtn.setAttribute("class", "btn-info border-dark");
@@ -30,14 +31,16 @@ startQuizBtn.innerHTML = "Start quiz";
 startBtn.appendChild(startQuizBtn);
 timer.textContent = "Timer : ";
 
+//start time
 var secondsLeft = 30;
+
 
 var questionIndex = 0;
 
+//set score
 var score = 0;
 
 //questions
-
 var myQuestions = [
   //0
   {
@@ -112,7 +115,7 @@ function showquesitons() {
     var choicesBtn = document.createElement("button");
     choicesBtn.setAttribute(
       "class",
-      "d-grid col-3 m-3 mx-auto btn-sm border-dark btn-block col-lg-10"
+      "d-grid col-3 m-3 mx-auto btn-sm bg-info col-lg-10"
     );
     choicesBtn.textContent = userchoices[i];
     quizContainer.appendChild(choicesBtn);
@@ -120,6 +123,7 @@ function showquesitons() {
   }
 }
 
+//validate answers
 function validateAnswer(evt) {
   var quizItem = myQuestions.length;
   var answer = myQuestions[questionIndex].answer;
@@ -151,7 +155,7 @@ function validateAnswer(evt) {
     showquesitons();
   }
 }
-// Event listener to capture initials and local storage for initials and score
+// store initial and score to localstorage
 var userInitial = document.querySelector("#user-initial");
 userInitial.textContent = "";
 
@@ -159,9 +163,9 @@ var submitInitialBtn = document.querySelector("#submit-initial");
 submitInitialBtn.addEventListener("click", function () {
 
   var initialText = userInitial.value;
-  if (initialText === null) {
+  if (initialText.length === 0) {
 
-    console.log("No value entered!");
+    alert("Pleas enter your initial");
 
   } else {
     var finalText = {
