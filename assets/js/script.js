@@ -12,10 +12,11 @@ var finalScore = document.querySelector("#final-score");
 //create elements, add text and append to html section
 
 var scoreText = document.createElement("a");
-scoreText.setAttribute("href", "highScore.html");
+scoreText.setAttribute("href", "highscore.html");
 scoreText.setAttribute("class", "text-dark");
 scoreText.innerHTML = "View HighScore";
 highScore.appendChild(scoreText);
+
 
 
 var headerText = document.createElement("p");
