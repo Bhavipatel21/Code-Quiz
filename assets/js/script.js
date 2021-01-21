@@ -42,7 +42,7 @@ var headerText = document.createElement("p");
 
 headerText.innerHTML =
 
-  "This Javascript will sureley help you to brush up your JavaScript concenpts.It's Quiz Time!!! Please Note that 10 seconds will be deducted if your answer is incorrect.";
+  "This Javascript will surely help you to brush up your JavaScript concenpts.It's Quiz Time!!! Please Note that 10 seconds will be deducted if your answer is incorrect.";
 
  
 
