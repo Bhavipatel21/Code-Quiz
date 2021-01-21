@@ -26,7 +26,8 @@ headerText.innerHTML =
 //create startquiz button
 quizContainer.appendChild(headerText);
 var startQuizBtn = document.createElement("button");
-startQuizBtn.setAttribute("class", "btn-info border-dark");
+startQuizBtn.setAttribute("class", "border-dark");
+startQuizBtn.setAttribute("style", "color:white; background-color:purple");
 startQuizBtn.innerHTML = "Start quiz";
 startBtn.appendChild(startQuizBtn);
 timer.textContent = "Timer : ";
@@ -115,8 +116,9 @@ function showquesitons() {
     var choicesBtn = document.createElement("button");
     choicesBtn.setAttribute(
       "class",
-      "d-grid col-3 m-3 mx-auto btn-sm bg-info col-lg-10"
+      "d-grid col-3 m-3 mx-auto btn-sm col-lg-10"
     );
+    choicesBtn.setAttribute("style", "color:white; background-color:purple")
     choicesBtn.textContent = userchoices[i];
     quizContainer.appendChild(choicesBtn);
     choicesBtn.addEventListener("click", validateAnswer);
@@ -160,6 +162,7 @@ var userInitial = document.querySelector("#user-initial");
 userInitial.textContent = "";
 
 var submitInitialBtn = document.querySelector("#submit-initial");
+submitInitialBtn.setAttribute("style", "color:white; background-color:purple");
 submitInitialBtn.addEventListener("click", function () {
 
   var initialText = userInitial.value;
