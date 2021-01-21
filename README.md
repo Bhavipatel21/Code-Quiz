@@ -31,4 +31,4 @@ Navigate to url : https://bhavipatel21.github.io/Code-Quiz/
 
 ## Mock-up :
 
-
+(./assets/images/codequiz_homepage.jpg)
