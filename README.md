@@ -32,19 +32,19 @@ Navigate to url : https://bhavipatel21.github.io/Code-Quiz/
 ## Mock-up :
 * Code quiz homepage
 
-![codingquiz homepage](./assets/images/quizhomepage.png)
+![codingquiz homepage](./assets/images/codequizhomepage.png)
 
 * Code quiz questions
 
-![codingquiz homepage](./assets/images/quizquestions.png)
+![codingquiz homepage](./assets/images/codequizquestionpage.png)
 
 * Highscore and User Initial
 
-![codingquiz homepage](./assets/images/userinitialandscore.png)
+![codingquiz homepage](./assets/images/userinitialscorepage.png)
 
 * Saved Highscore and User Initial
  
-![codingquiz homepage](./assets/images/savedscore.png)
+![codingquiz homepage](./assets/images/storedscoreinitialpage.png)
 
 
 ## PSEUDOCODE 
