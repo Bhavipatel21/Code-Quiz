@@ -142,9 +142,8 @@ function setTimer() {
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
 
-      quizOver.classList.remove("d-none");
 
-      quizContainer.classList.add("d-none");
+      allDone()
     } else {
       secondsLeft--;
     }
@@ -193,7 +192,6 @@ function validateAnswer(evt) {
 
     score++;
 
-    console.log(score);
 
     finalScore.textContent = "Your final score: " + score;
   } else {
@@ -205,11 +203,7 @@ function validateAnswer(evt) {
   if (questionIndex === quizItem - 1) {
     secondsLeft = 0;
 
-    quizContainer.classList.add("d-none");
-
-    result.classList.add("d-none");
-
-    quizOver.classList.remove("d-none");
+    allDone()
   } else {
     questionIndex++;
 
@@ -239,7 +233,6 @@ submitInitialBtn.addEventListener("click", function () {
       score: score,
     };
 
-    console.log(finalText);
 
     var allScores = localStorage.getItem("allScores");
 
@@ -258,3 +251,12 @@ submitInitialBtn.addEventListener("click", function () {
     window.location.href = "highscore.html";
   }
 });
+
+function allDone() {
+  quizContainer.classList.add("d-none");
+
+  result.classList.add("d-none");
+
+  quizOver.classList.remove("d-none");
+
+}
